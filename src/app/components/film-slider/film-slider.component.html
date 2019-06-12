@@ -1,0 +1,6 @@
+<div class="d-flex p-2 flex-wrap" *ngIf="filmList">
+  <p class="lead">{{title}}</p>
+    <div class="img-list">
+      <img src="https://image.tmdb.org/t/p/w185/{{film.poster_path}}" alt="{{film.title}}" *ngFor="let film of filmList" (click)="openDetail(film.id);">
+    </div>
+</div>

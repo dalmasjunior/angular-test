@@ -1,0 +1,10 @@
+<ngb-carousel *ngIf="discovered" [showNavigationArrows]="false">
+  <ng-template ngbSlide *ngFor="let film of discovered">
+    <img src="https://image.tmdb.org/t/p/w1280/{{film.backdrop_path}}" class="img-fluid" alt="{{film.title}}">
+    <div class="carousel-caption">
+      <h1 class="display-4">{{film.title}}</h1>
+      <p class="d-none d-sm-block lead">{{film.overview}}</p>
+    </div>
+    <div class="carousel-overlay" (click)="openDetail(film.id);"></div>
+  </ng-template>
+</ngb-carousel>

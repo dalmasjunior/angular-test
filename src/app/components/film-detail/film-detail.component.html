@@ -1,0 +1,11 @@
+<ngb-carousel *ngIf="film" [showNavigationArrows]="false" [showNavigationIndicators]="showNavigationIndicators">
+    <ng-template ngbSlide >
+      <img src="https://image.tmdb.org/t/p/w1280/{{film.backdrop_path}}" class="img-fluid" alt="{{film.title}}">
+      <div class="carousel-caption">
+        <h1 class="display-4">{{film.title}}</h1>
+        <p class="d-none d-sm-block lead">{{film.overview}}</p>
+      </div>
+      <div class="carousel-overlay"></div>
+    </ng-template>
+  </ngb-carousel>
+  <p class=" d-block d-sm-none lead">{{film.overview}}</p>
